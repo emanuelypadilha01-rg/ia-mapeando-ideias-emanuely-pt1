@@ -1,0 +1,185 @@
+:root {
+  --bg-color: #f4f6fb;
+  --card-bg: #ffffff;
+  --primary-color: #7c73e6;
+  --primary-light: #eef0fc;
+  --text-main: #333952;
+  --text-muted: #79829c;
+  --accent-pink: #f7d6e0;
+  --accent-yellow: #fcf4dd;
+  --accent-green: #ddedf4;
+  --accent-purple: #e8dff5;
+  --shadow: 0 10px 25px rgba(124, 115, 230, 0.08);
+  --border-radius: 16px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-main);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  padding: 40px 20px;
+}
+
+/* --- CABEÇALHO --- */
+header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+header h1 {
+  font-size: 2.2rem;
+  color: var(--primary-color);
+  margin-bottom: 8px;
+  font-weight: 700;
+}
+
+header p {
+  color: var(--text-muted);
+  font-size: 1rem;
+}
+
+/* --- CONTAINER DOS CARDS (GRID) --- */
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+  width: 100%;
+  max-width: 1100px;
+}
+
+/* --- CARD ITEM --- */
+.card {
+  background: var(--card-bg);
+  border-radius: var(--border-radius);
+  padding: 24px;
+  box-shadow: var(--shadow);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  position: relative;
+  overflow: hidden;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(124, 115, 230, 0.15);
+}
+
+.card-tag {
+  align-self: flex-start;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 16px;
+}
+
+/* Cores das tags */
+.tag-incomodo { background-color: var(--accent-pink); color: #9c4163; }
+.tag-problema { background-color: var(--accent-yellow); color: #856a1d; }
+.tag-insatisfacao { background-color: var(--accent-purple); color: #5a3f7a; }
+
+.card h3 {
+  font-size: 1.2rem;
+  margin-bottom: 12px;
+  color: var(--text-main);
+}
+
+.card p {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+
+.card-btn {
+  color: var(--primary-color);
+  font-weight: 600;
+  font-size: 0.85rem;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+/* --- MODAL (TELA SUSPENSA) --- */
+dialog {
+  margin: auto;
+  border: none;
+  border-radius: var(--border-radius);
+  padding: 32px;
+  max-width: 500px;
+  width: 90%;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+  background: var(--card-bg);
+  color: var(--text-main);
+}
+
+dialog::backdrop {
+  background: rgba(51, 57, 82, 0.4);
+  backdrop-filter: blur(4px);
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.modal-header h2 {
+  font-size: 1.4rem;
+  color: var(--primary-color);
+}
+
+.close-btn {
+  background: var(--primary-light);
+  border: none;
+  color: var(--primary-color);
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 1.1rem;
+}
+
+.modal-body h4 {
+  margin-top: 15px;
+  margin-bottom: 5px;
+  font-size: 0.95rem;
+  color: var(--text-main);
+}
+
+.modal-body p {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+.solution-box {
+  background-color: var(--primary-light);
+  padding: 16px;
+  border-radius: 12px;
+  margin-top: 20px;
+  border-left: 4px solid var(--primary-color);
+}
+
+.solution-box h4 {
+  margin-top: 0;
+  color: var(--primary-color);
+}

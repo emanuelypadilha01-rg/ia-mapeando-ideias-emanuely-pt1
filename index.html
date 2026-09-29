@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Organizador de estudos da Emanuely</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- CABEÇALHO -->
+  <header>
+    <h1>Organizador de estudos da Emanuely</h1>
+    <p>Identificando desafios diários para construir uma rotina mais leve e eficiente.</p>
+  </header>
+
+  <!-- LISTA DE CARDS (PAINEL) -->
+  <main class="dashboard-grid">
+
+    <!-- Card 1 -->
+    <div class="card" onclick="openModal('modal1')">
+      <div>
+        <span class="card-tag tag-incomodo">Incômodo</span>
+        <h3>Procrastinação no início</h3>
+        <p>A sensação de não saber por onde começar faz com que o estudo seja adiado várias vezes ao dia.</p>
+      </div>
+      <div class="card-btn">Ver detalhes e solução &rarr;</div>
+    </div>
+
+    <!-- Card 2 -->
+    <div class="card" onclick="openModal('modal2')">
+      <div>
+        <span class="card-tag tag-problema">Problema Real</span>
+        <h3>Acúmulo de tarefas e prazos</h3>
+        <p>Deixar trabalhos e matérias acumularem até a véspera da entrega ou das avaliações.</p>
+      </div>
+      <div class="card-btn">Ver detalhes e solução &rarr;</div>
+    </div>
+
+    <!-- Card 3 -->
+    <div class="card" onclick="openModal('modal3')">
+      <div>
+        <span class="card-tag tag-insatisfacao">Insatisfação</span>
+        <h3>Sensação de baixa produtividade</h3>
+        <p>Estudar por horas mas sentir que não aprendeu o suficiente ou que o tempo foi desperdiçado.</p>
+      </div>
+      <div class="card-btn">Ver detalhes e solução &rarr;</div>
+    </div>
+
+    <!-- Card 4 -->
+    <div class="card" onclick="openModal('modal4')">
+      <div>
+        <span class="card-tag tag-incomodo">Incômodo</span>
+        <h3>Distrações digitais frequentes</h3>
+        <p>Interrupções constantes com notificações de redes sociais, mensagens e vídeos curtos.</p>
+      </div>
+      <div class="card-btn">Ver detalhes e solução &rarr;</div>
+    </div>
+
+    <!-- Card 5 -->
+    <div class="card" onclick="openModal('modal5')">
+      <div>
+        <span class="card-tag tag-problema">Problema Real</span>
+        <h3>Falta de um cronograma claro</h3>
+        <p>Não ter definido o que estudar em cada dia da semana, gerando confusão e perda de foco.</p>
+      </div>
+      <div class="card-btn">Ver detalhes e solução &rarr;</div>
+    </div>
+
+    <!-- Card 6 -->
+    <div class="card" onclick="openModal('modal6')">
+      <div>
+        <span class="card-tag tag-insatisfacao">Insatisfação</span>
+        <h3>Cansaço mental excessivo</h3>
+        <p>Falta de pausas estruturadas, resultando em esgotamento e perda de concentração rapidamente.</p>
+      </div>
+      <div class="card-btn">Ver detalhes e solução &rarr;</div>
+    </div>
+
+  </main>
+
+  <!-- MODAIS (Janelas que abrem ao clicar nos cards) -->
+
+  <!-- Modal 1 -->
+  <dialog id="modal1">
+    <div class="modal-header">
+      <h2>Procrastinação no início</h2>
+      <button class="close-btn" onclick="closeModal('modal1')">&times;</button>
+    </div>
+    <div class="modal-body">
+      <h4>O Diagnóstico:</h4>
+      <p>A fricção inicial de abrir os livros ou cadernos faz a mente procurar recompensas mais rápidas, como o celular.</p>
+      <div class="solution-box">
+        <h4>💡 Como o app vai ajudar:</h4>
+        <p>Aplicação da regra dos 5 minutos e divisão do conteúdo em micrometas fáceis de iniciar.</p>
+      </div>
+    </div>
+  </dialog>
+
+  <!-- Modal 2 -->
+  <dialog id="modal2">
+    <div class="modal-header">
+      <h2>Acúmulo de Tarefas</h2>
+      <button class="close-btn" onclick="closeModal('modal2')">&times;</button>
+    </div>
+    <div class="modal-body">
+      <h4>O Diagnóstico:</h4>
+      <p>A falta de priorização faz com que as tarefas mais difíceis fiquem acumuladas para a última hora.</p>
+      <div class="solution-box">
+        <h4>💡 Como o app vai ajudar:</h4>
+        <p>Matriz de prioridades inteligente que organiza tarefas por urgência e importância automaticamente.</p>
+      </div>
+    </div>
+  </dialog>
+
+  <!-- Modal 3 -->
+  <dialog id="modal3">
+    <div class="modal-header">
+      <h2>Baixa Produtividade</h2>
+      <button class="close-btn" onclick="closeModal('modal3')">&times;</button>
+    </div>
+    <div class="modal-body">
+      <h4>O Diagnóstico:</h4>
+      <p>Estudo passivo (apenas ler/sublinhar) dá a falsa ilusão de estudo, mas retém pouca informação.</p>
+      <div class="solution-box">
+        <h4>💡 Como o app vai ajudar:</h4>
+        <p>Incentivo a métodos ativos de estudo, como resolução de questões e resumos com as próprias palavras.</p>
+      </div>
+    </div>
+  </dialog>
+
+  <!-- Modal 4 -->
+  <dialog id="modal4">
+    <div class="modal-header">
+      <h2>Distrações Digitais</h2>
+      <button class="close-btn" onclick="closeModal('modal4')">&times;</button>
+    </div>
+    <div class="modal-body">
+      <h4>O Diagnóstico:</h4>
+      <p>Deixar o celular por perto quebra o estado de fluxo (foco profundo) a cada pouca quantidade de minutos.</p>
+      <div class="solution-box">
+        <h4>💡 Como o app vai ajudar:</h4>
+        <p>Timer Pomodoro integrado com alertas para focar e pausas programadas.</p>
+      </div>
+    </div>
+  </dialog>
+
+  <!-- Modal 5 -->
+  <dialog id="modal5">
+    <div class="modal-header">
+      <h2>Falta de Cronograma</h2>
+      <button class="close-btn" onclick="closeModal('modal5')">&times;</button>
+    </div>
+    <div class="modal-body">
+      <h4>O Diagnóstico:</h4>
+      <p>Tomar decisões sobre o que estudar no momento em que se senta à mesa gasta energia mental desnecessária.</p>
+      <div class="solution-box">
+        <h4>💡 Como o app vai ajudar:</h4>
+        <p>Grade semanal visual e personalizada configurada no início da semana.</p>
+      </div>
+    </div>
+  </dialog>
+
+  <!-- Modal 6 -->
+  <dialog id="modal6">
+    <div class="modal-header">
+      <h2>Cansaço Mental</h2>
+      <button class="close-btn" onclick="closeModal('modal6')">&times;</button>
+    </div>
+    <div class="modal-body">
+      <h4>O Diagnóstico:</h4>
+      <p>Estudar por blocos muito longos de tempo sem descanso diminui drasticamente a assimilação.</p>
+      <div class="solution-box">
+        <h4>💡 Como o app vai ajudar:</h4>
+        <p>Lembretes de pausas ativas (beber água, se alongar) entre os ciclos de estudo.</p>
+      </div>
+    </div>
+  </dialog>
+
+  <!-- JAVASCRIPT APENAS PARA ABRIR/FECHAR MODAL -->
+  <script>
+    function openModal(modalId) {
+      document.getElementById(modalId).showModal();
+    }
+
+    function closeModal(modalId) {
+      document.getElementById(modalId).close();
+    }
+  </script>
+</body>
+</html>
